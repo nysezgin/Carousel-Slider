@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+html {
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Inter", sans-serif;
+  background-image: url("./images/pattern-bg.svg"),
+    url("./images/pattern-curve.svg");
+  background-size: 260px, contain;
+  background-repeat: no-repeat;
+  background-position: center 30px, bottom left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 1024px) {
+  body {
+    background-size: 40%, auto;
+    background-position: 95% 30px, bottom left;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 
+Student
+*/
+
+.student {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
+  width: 70%;
 }
 
-.App-link {
-  color: #61dafb;
+.slide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s ease, opacity 1s ease;
+}
+.slide--active {
+  visibility: visible;
+  opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* 
+Student Image
+*/
+
+.student__image {
+  margin-top: 55px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .student__image {
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    right: 110px;
+    width: 420px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* 
+Student Text
+*/
+
+.student__text-container {
+  margin-top: 50px;
+  padding-top: 20px;
+  background-image: url("./images/pattern-quotes.svg");
+  background-size: 50px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .student__text-container {
+    text-align: left;
+    margin: 90px 40% 0 0;
   }
+}
+
+@media screen and (min-width: 1440px) {
+  .student__text-container {
+    text-align: left;
+    margin: 90px 20% 0 0;
+  }
+}
+
+/* 
+Student Review
+*/
+
+.student__review {
+  color: hsl(240, 38%, 20%);
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1024px) {
+  .student__review {
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+}
+
+/* 
+Student Info
+*/
+
+@media screen and (min-width: 1024px) {
+  .student__info {
+    display: flex;
+  }
+}
+
+.student__info-name {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .student__info-name {
+    margin-top: 0;
+    font-size: 1.2rem;
+  }
+}
+
+.student__info-occupation {
+  color: hsl(240, 18%, 77%);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .student__info-occupation {
+    margin-left: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+/* 
+Carousel Button
+*/
+
+.carousel-button {
+  position: absolute;
+  top: 235px;
+  left: 50%;
+  margin-left: -42px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .carousel-button {
+    top: 480px;
+    left: auto;
+    right: 380px;
+    margin-left: 0;
+  }
+}
+
+.carousel-button__previous,
+.carousel-button__next {
+  padding: 10px 15px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.carousel-button__previous:focus,
+.carousel-button__next:focus {
+  background-color: rgba(110, 63, 197, 0.918);
+}
+
+.carousel-button__previous {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.carousel-button__next {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
