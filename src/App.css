@@ -5,18 +5,18 @@ html {
 }
 
 body {
+  min-height: 100%;
+  margin: 0;
   font-family: "Inter", sans-serif;
-  background-image: url("./images/pattern-bg.svg"),
-    url("./images/pattern-curve.svg");
+  background-image: url("./images/pattern-bg.svg");
   background-size: 260px, contain;
   background-repeat: no-repeat;
-  background-position: center 30px, bottom left;
+  background-position: center 30px;
 }
 
 @media screen and (min-width: 1024px) {
   body {
     background-size: 40%, auto;
-    background-position: 95% 30px, bottom left;
   }
 }
 
