@@ -33,12 +33,12 @@ Student
 }
 
 .slide {
-  visibility: hidden;
+  transform: scale(0);
   opacity: 0;
-  transition: visibility 1s ease, opacity 1s ease;
+  transition: opacity 1s ease;
 }
 .slide--active {
-  visibility: visible;
+  transform: scale(1);
   opacity: 1;
 }
 
